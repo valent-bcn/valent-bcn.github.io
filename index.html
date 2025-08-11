@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>My CV and My Room</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #f0f8ff; padding: 20px; text-align: center; }
-    main { padding: 20px; }
-    a.button {
-      display: inline-block;
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    a.button:hover { background-color: #45a049; }
-  </style>
+<meta charset="UTF-8" />
+<title>My CV & Interactive Room</title>
+<style>
+  body, html {
+    margin: 0; padding: 0; font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+  header {
+    height: 100vh;
+    background: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  header h1 {
+    margin-bottom: 10px;
+  }
+  header a.button {
+    background-color: #0071e3;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 20px;
+  }
+  header a.button:hover {
+    background-color: #005bb5;
+  }
+  section#game {
+    height: 100vh;
+    background: #222;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Aquí puedes añadir estilos para tu juego */
+</style>
 </head>
 <body>
-  <header>
-    <h1>Hello, I’m David</h1>
-    <p>Download my CV:</p>
-    <a class="button" href="cv.pdf" download>📄 Download CV</a>
-  </header>
 
-  <main>
-    <h2>Explore my room</h2>
-    <p>Scroll down or click the button to enter my interactive space.</p>
-    <!--
-      <a class="button" href="room.html">Enter the Room</a>
-    -->
-  </main>
+<header>
+  <h1>Hello, I’m David</h1>
+  <p>Welcome to my personal room. Feel free to download my CV below.</p>
+  <a class="button" href="cv.pdf" download>📄 Download CV</a>
+</header>
+
+<section id="game">
+  <!-- Aquí cargarás tu juego WebAssembly o lo que quieras -->
+  <canvas id="gameCanvas" width="800" height="600" style="background:#333;"></canvas>
+  <!-- O simplemente un div si tu juego no usa canvas -->
+</section>
+
+<script>
+  // Aquí puedes poner el código JS para cargar y ejecutar tu juego WebAssembly
+  // o manejar la interacción con el canvas
+</script>
+
 </body>
 </html>
